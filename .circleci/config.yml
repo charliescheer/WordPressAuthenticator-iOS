@@ -2,7 +2,7 @@ version: 2.1
 
 orbs:
   # This uses the iOS Orb located at https://github.com/wordpress-mobile/circleci-orbs
-  ios: wordpress-mobile/ios@0.0.24
+  ios: wordpress-mobile/ios@0.0.31
 
 workflows:
   test_and_validate:
@@ -18,4 +18,4 @@ workflows:
           name: Validate Podspec
           xcode-version: "10.2.0"
           podspec-path: WordPressAuthenticator.podspec
-          update-specs-repo: true
+          sources: https://cdn.cocoapods.org/
