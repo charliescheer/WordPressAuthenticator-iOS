@@ -567,6 +567,7 @@
 		B5ED78F6207E976500A8FD8C /* WordPressAuthenticator */ = {
 			isa = PBXGroup;
 			children = (
+				CE876E512475940800DE025E /* Unified Auth */,
 				CE1B18CA20EEC31000BECC3F /* Credentials */,
 				B5609099208A4EAF00399AE4 /* Authenticator */,
 				3F550D4F23DA4A6B007E5897 /* Email Client Picker */,
@@ -631,6 +632,29 @@
 				CE30A2AC2257CECC00DF3CDA /* AuthenticatorCredentials.swift */,
 			);
 			path = Credentials;
+			sourceTree = "<group>";
+		};
+		CE876E512475940800DE025E /* Unified Auth */ = {
+			isa = PBXGroup;
+			children = (
+				CE97BCCC2475E06900612FE2 /* Classes */,
+				CE876E562475946400DE025E /* View Related */,
+			);
+			path = "Unified Auth";
+			sourceTree = "<group>";
+		};
+		CE876E562475946400DE025E /* View Related */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Related";
+			sourceTree = "<group>";
+		};
+		CE97BCCC2475E06900612FE2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
