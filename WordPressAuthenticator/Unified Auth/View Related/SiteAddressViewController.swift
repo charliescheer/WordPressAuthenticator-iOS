@@ -5,12 +5,18 @@ import UIKit
 ///
 class SiteAddressViewController: UIViewController {
 
+    /// Use protocol composition to create a Factory type that
+    /// includes all the factory protocols that this VC needs.
+    ///
     typealias Factory = LoginFieldLoaderFactory & ViewControllerFactory
-
     private let factory: Factory
 
-    private lazy var loader = factory.makeLoginFieldLoader()
+    /// Lazily create the loginFields by using the injected factory.
+    ///
+    private lazy var loginFields = factory.makeLoginFieldLoader()
 
+    /// Designated initializer.
+    ///
     init(factory: Factory) {
         self.factory = factory
         super.init(nibName:nil, bundle: nil)
@@ -20,9 +26,13 @@ class SiteAddressViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
+
+    // MARK: - View Lifecycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Set a special case login field.
+        loginFields.meta.userIsDotCom = false
     }
 }
