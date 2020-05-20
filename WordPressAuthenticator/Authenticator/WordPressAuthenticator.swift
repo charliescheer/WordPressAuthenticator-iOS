@@ -14,9 +14,13 @@ import AuthenticationServices
     ///
     private static var privateInstance: WordPressAuthenticator?
 
-    /// Observer for AppleID Credential State
+    /// Observer for AppleID Credential State.
     ///
     private var appleIDCredentialObserver: NSObjectProtocol?
+
+    /// Private viewController Factory.
+    ///
+    private let container = DependencyContainer()
 
     /// Shared Instance.
     ///
@@ -198,8 +202,14 @@ import AuthenticationServices
     /// Returns an instance of LoginSiteAddressViewController: allows the user to log into a WordPress.org website.
     ///
     @objc public class func signinForWPOrg() -> UIViewController {
+        if WordPressAuthenticator.shared.configuration.enableUnifiedAuth &&
+            WordPressAuthenticator.shared.configuration.enableUnifiedSiteAddress {
+            // Use the ViewControllerFactory in the DependencyContainer to create a new SiteAddressViewController.
+            return WordPressAuthenticator.shared.container.makeSiteAddressViewController()
+        }
+
         guard let controller = LoginSiteAddressViewController.instantiate(from: .login) else {
-            fatalError("unable to create wpcom password screen")
+            fatalError("☠️ Unable to create Site Address screen")
         }
 
         return controller
