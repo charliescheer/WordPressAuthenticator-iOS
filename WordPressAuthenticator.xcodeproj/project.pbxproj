@@ -118,6 +118,7 @@
 		CE876E542475943100DE025E /* SiteAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE876E522475943100DE025E /* SiteAddressViewController.swift */; };
 		CE876E552475943100DE025E /* SiteAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE876E532475943100DE025E /* SiteAddressViewController.xib */; };
 		CE97BCCB2475D85900612FE2 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE97BCCA2475D85900612FE2 /* ViewControllerFactory.swift */; };
+		CE97BCD12475E73E00612FE2 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE97BCD02475E73E00612FE2 /* DependencyContainer.swift */; };
 		CEDE0D93242011E000CB3345 /* NSObject+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDE0D92242011E000CB3345 /* NSObject+Helpers.swift */; };
 		CEDE0D952420121D00CB3345 /* UIStoryboard+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDE0D942420121D00CB3345 /* UIStoryboard+Helpers.swift */; };
 		CEDE0D972420126900CB3345 /* UIViewController+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDE0D962420126900CB3345 /* UIViewController+Helpers.swift */; };
@@ -277,6 +278,7 @@
 		CE876E522475943100DE025E /* SiteAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteAddressViewController.swift; sourceTree = "<group>"; };
 		CE876E532475943100DE025E /* SiteAddressViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SiteAddressViewController.xib; sourceTree = "<group>"; };
 		CE97BCCA2475D85900612FE2 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		CE97BCD02475E73E00612FE2 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		CEDE0D92242011E000CB3345 /* NSObject+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Helpers.swift"; sourceTree = "<group>"; };
 		CEDE0D942420121D00CB3345 /* UIStoryboard+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Helpers.swift"; sourceTree = "<group>"; };
 		CEDE0D962420126900CB3345 /* UIViewController+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Helpers.swift"; sourceTree = "<group>"; };
@@ -662,6 +664,7 @@
 			isa = PBXGroup;
 			children = (
 				CE97BCCA2475D85900612FE2 /* ViewControllerFactory.swift */,
+				CE97BCD02475E73E00612FE2 /* DependencyContainer.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -967,6 +970,7 @@
 				CEDE0D952420121D00CB3345 /* UIStoryboard+Helpers.swift in Sources */,
 				B5ED7920207E993E00A8FD8C /* WPAuthenticatorLogging.m in Sources */,
 				B5609138208A563800399AE4 /* LoginSiteAddressViewController.swift in Sources */,
+				CE97BCD12475E73E00612FE2 /* DependencyContainer.swift in Sources */,
 				B560910B208A54F800399AE4 /* LoginFacade.m in Sources */,
 				CE30A2AD2257CECC00DF3CDA /* AuthenticatorCredentials.swift in Sources */,
 				B5609145208A563800399AE4 /* LoginViewController.swift in Sources */,
