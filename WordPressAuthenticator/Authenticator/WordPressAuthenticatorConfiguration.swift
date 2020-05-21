@@ -55,11 +55,13 @@ public struct WordPressAuthenticatorConfiguration {
     ///
     let enableSignInWithApple: Bool
 
-    /// Flag indicating if the unified login/signup flow should be displayed.
+    /// Flag for the unified login/signup flows.
+    /// If disabled, none of the unified flows will display.
+    /// If enabled, allows selected unified flows to display.
     ///
     let enableUnifiedAuth: Bool
 
-    /// Flag indicating if the unified login by Site Address flow should be displayed.
+    /// Flag indicating if the unified login by Site Address flow should display.
     ///
     let enableUnifiedSiteAddress: Bool
     
