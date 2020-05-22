@@ -490,6 +490,21 @@ open class LoginEmailViewController: LoginViewController, NUXKeyboardResponder {
         AppleAuthenticator.sharedInstance.showFrom(viewController: self)
     }
 
+    /// Displays the self-hosted sign in form.
+    ///
+    func loginToSelfHostedSite() {
+        guard let vc = LoginSiteAddressViewController.instantiate(from: .login) else {
+            DDLogError("Failed to navigate from LoginViewController to LoginSiteAddressViewController")
+            return
+        }
+
+        vc.loginFields = loginFields
+        vc.dismissBlock = dismissBlock
+        vc.errorToPresent = errorToPresent
+
+        navigationController?.pushViewController(vc, animated: true)
+    }
+
 
     @IBAction func handleTextFieldDidChange(_ sender: UITextField) {
         switch sender {
