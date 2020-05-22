@@ -118,6 +118,23 @@ class LoginPrologueViewController: LoginViewController {
         }
     }
 
+
+    /// Displays the self-hosted sign in form.
+    ///
+    private func loginToSelfHostedSite() {
+        guard let vc = LoginSiteAddressViewController.instantiate(from: .login) else {
+            DDLogError("Failed to navigate from LoginViewController to LoginSiteAddressViewController")
+            return
+        }
+
+        vc.loginFields = loginFields
+        vc.dismissBlock = dismissBlock
+        vc.errorToPresent = errorToPresent
+
+        navigationController?.pushViewController(vc, animated: true)
+    }
+
+
     private func signupTapped() {
         // This stat is part of a funnel that provides critical information.
         // Before making ANY modification to this stat please refer to: p4qSXL-35X-p2
