@@ -5,6 +5,16 @@ import Foundation
 ///
 final public class DependencyContainer {
     lazy var facade = WordPressXMLRPCAPIFacade()
+
+//    lazy var loginFacade: LoginFacade = {
+//        let configuration = WordPressAuthenticator.shared.configuration
+//        let facade = LoginFacade(dotcomClientID: configuration.wpcomClientId,
+//                                 dotcomSecret: configuration.wpcomSecret,
+//                                 userAgent: configuration.userAgent)
+//        facade.delegate = self
+//        return facade
+//    }()
+
     lazy var service = WordPressComBlogService()
 }
 
