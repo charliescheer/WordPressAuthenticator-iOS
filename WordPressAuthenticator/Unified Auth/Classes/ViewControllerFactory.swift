@@ -2,9 +2,5 @@ import Foundation
 
 
 protocol ViewControllerFactory {
-    func makeSiteAddressViewController() -> SiteAddressViewController
-}
-
-protocol LoginFieldLoaderFactory {
-    func makeLoginFieldLoader() -> LoginFields
+    func makeSiteAddressViewController(with loginFields: LoginFields) -> SiteAddressViewController
 }

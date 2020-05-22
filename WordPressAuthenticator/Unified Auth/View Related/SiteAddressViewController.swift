@@ -4,22 +4,15 @@ import UIKit
 /// SiteAddressViewController: Displays the site address field to log in.
 ///
 class SiteAddressViewController: UIViewController {
-
-    /// Use protocol composition to create a Factory type that
-    /// includes all the factory protocols that this VC needs.
+    /// Login properties
     ///
-    typealias Factory = LoginFieldLoaderFactory & ViewControllerFactory
-    private let factory: Factory
-
-    /// Lazily create the loginFields by using the injected factory.
-    ///
-    private lazy var loginFields = factory.makeLoginFieldLoader()
+    let loginFields: LoginFields
 
     /// Designated initializer.
     ///
-    init(factory: Factory) {
-        self.factory = factory
-        super.init(nibName:nil, bundle: nil)
+    init(loginFields: LoginFields) {
+        self.loginFields = loginFields
+        super.init(nibName: nil, bundle: nil)
     }
 
     required init?(coder: NSCoder) {
