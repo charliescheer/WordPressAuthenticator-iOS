@@ -50,4 +50,24 @@ class AppSelectorTests: XCTestCase {
             }
         }
     }
+
+    func testAppSelectorTitlesLocallizedReturnCorrectStrings() {
+        let appleMail = AppSelectorTitles.appleMail
+        let gmail = AppSelectorTitles.gmail
+        let airmail = AppSelectorTitles.airmail
+        let msOutlook = AppSelectorTitles.msOutlook
+        let spark = AppSelectorTitles.spark
+        let yahooMail = AppSelectorTitles.yahooMail
+        let fastMail = AppSelectorTitles.fastmail
+        let cancel = AppSelectorTitles.cancel
+
+        XCTAssertEqual(appleMail.localized, NSLocalizedString("Mail (Default)", comment: "Option to select the Apple Mail app when logging in with magic links"))
+        XCTAssertEqual(gmail.localized, NSLocalizedString("Gmail", comment: "Option to select the Gmail app when logging in with magic links"))
+        XCTAssertEqual(airmail.localized, NSLocalizedString("Airmail", comment: "Option to select the Airmail app when logging in with magic links"))
+        XCTAssertEqual(msOutlook.localized, NSLocalizedString("Microsoft Outlook", comment: "Option to select the Microsft Outlook app when logging in with magic links"))
+        XCTAssertEqual(spark.localized, NSLocalizedString("Spark", comment: "Option to select the Spark email app when logging in with magic links"))
+        XCTAssertEqual(yahooMail.localized, NSLocalizedString("Yahoo Mail", comment: "Option to select the Yahoo Mail app when logging in with magic links"))
+        XCTAssertEqual(fastMail.localized, NSLocalizedString("Fastmail", comment: "Option to select the Fastmail app when logging in with magic links"))
+        XCTAssertEqual(cancel.localized, NSLocalizedString("Cancel", comment: "Option to cancel the email app selection when logging in with magic links"))
+    }
 }
