@@ -66,7 +66,8 @@ extension AppSelector {
     convenience init?(with plistFile: String,
                       in bundle: Bundle,
                       defaultAction: UIAlertAction? = nil,
-                      sourceView: UIView) {
+                      sourceView: UIView,
+                      urlHandler: URLHandler = UIApplication.shared) {
 
         guard let plistPath = bundle.path(forResource: plistFile, ofType: "plist"),
             let availableApps = NSDictionary(contentsOfFile: plistPath) as? [String: String] else {
@@ -74,7 +75,8 @@ extension AppSelector {
         }
         self.init(with: availableApps,
                   defaultAction: defaultAction,
-                  sourceView: sourceView)
+                  sourceView: sourceView,
+                  urlHandler: urlHandler)
     }
 
     /// Convenience init for a picker that calls supported email clients apps, defined in EmailClients.plist

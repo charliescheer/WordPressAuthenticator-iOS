@@ -118,6 +118,8 @@
 		BA60FAB224CC3BAC0088FC8B /* WordPressSourceTagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA60FAB124CC3BAC0088FC8B /* WordPressSourceTagTests.swift */; };
 		BA60FAB424CC3C350088FC8B /* OnePasswordResultsFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA60FAB324CC3C350088FC8B /* OnePasswordResultsFetcher.swift */; };
 		BA60FABA24CC41710088FC8B /* CredentialsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA60FAB924CC41710088FC8B /* CredentialsTests.swift */; };
+		BA60FABE24CFFBE20088FC8B /* MockValidEmailClients.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA60FABD24CFFBE20088FC8B /* MockValidEmailClients.plist */; };
+		BA60FAC024D001520088FC8B /* MockEmptyEmailList.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA60FABF24D001520088FC8B /* MockEmptyEmailList.plist */; };
 		CE16177521B6D82200B82A47 /* WordPressAuthenticatorDisplayStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE16177421B6D82200B82A47 /* WordPressAuthenticatorDisplayStrings.swift */; };
 		CE16177821B70C1A00B82A47 /* WordPressAuthenticatorDisplayTextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE16177721B70C1A00B82A47 /* WordPressAuthenticatorDisplayTextTests.swift */; };
 		CE1B18C920EEC2C200BECC3F /* SocialService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1B18C820EEC2C200BECC3F /* SocialService.swift */; };
@@ -295,6 +297,8 @@
 		BA60FAB124CC3BAC0088FC8B /* WordPressSourceTagTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordPressSourceTagTests.swift; sourceTree = "<group>"; };
 		BA60FAB324CC3C350088FC8B /* OnePasswordResultsFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnePasswordResultsFetcher.swift; sourceTree = "<group>"; };
 		BA60FAB924CC41710088FC8B /* CredentialsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialsTests.swift; sourceTree = "<group>"; };
+		BA60FABD24CFFBE20088FC8B /* MockValidEmailClients.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MockValidEmailClients.plist; sourceTree = "<group>"; };
+		BA60FABF24D001520088FC8B /* MockEmptyEmailList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MockEmptyEmailList.plist; sourceTree = "<group>"; };
 		C736FF243DE333FCAB1C2614 /* Pods_WordPressAuthenticator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordPressAuthenticator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE16177421B6D82200B82A47 /* WordPressAuthenticatorDisplayStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordPressAuthenticatorDisplayStrings.swift; sourceTree = "<group>"; };
 		CE16177721B70C1A00B82A47 /* WordPressAuthenticatorDisplayTextTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordPressAuthenticatorDisplayTextTests.swift; sourceTree = "<group>"; };
@@ -701,6 +705,8 @@
 				BA60FAA724CC3B9A0088FC8B /* MockWordpressAuthenticatorProvider.swift */,
 				BA60FAAB24CC3B9B0088FC8B /* ModalViewControllerPresentingSpy.swift */,
 				BA60FAAA24CC3B9B0088FC8B /* WordPressAuthenticatorDelegateSpy.swift */,
+				BA60FABD24CFFBE20088FC8B /* MockValidEmailClients.plist */,
+				BA60FABF24D001520088FC8B /* MockEmptyEmailList.plist */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -881,6 +887,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA60FABE24CFFBE20088FC8B /* MockValidEmailClients.plist in Resources */,
+				BA60FAC024D001520088FC8B /* MockEmptyEmailList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
