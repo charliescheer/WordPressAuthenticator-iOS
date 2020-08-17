@@ -27,6 +27,8 @@ class MockUrlHandler: URLHandler {
 
 class AppSelectorTests: XCTestCase {
 
+    // MARK: Initializer Tests
+
     func testSelectorInitializationSuccess() {
         // Given
         let urlHandler = MockUrlHandler()
@@ -68,4 +70,45 @@ class AppSelectorTests: XCTestCase {
             }
         }
     }
+
+    func testAppSelectorInitWithPlistFileSucceeds() {
+        let plistPath = "MockValidEmailClients"
+        let bundle = Bundle(for: type(of: self))
+        let urlHandler = MockUrlHandler()
+
+        let appSelector = AppSelector(with: plistPath,
+                                      in: bundle,
+                                      sourceView: UIView(),
+                                      urlHandler: urlHandler)
+
+        XCTAssertNotNil(appSelector)
+    }
+
+    func testAppSelectorInitWithoutValidPlistFile() {
+        let plistPath = "Invalid Plist Name"
+        let bundle = Bundle(for: type(of: self))
+        let urlHandler = MockUrlHandler()
+
+        let appSelector = AppSelector(with: plistPath,
+                                      in: bundle,
+                                      sourceView: UIView(),
+                                      urlHandler: urlHandler)
+
+        XCTAssertNil(appSelector)
+    }
+
+    func testAppSelectorInitWithEmptyPlistFileFails() {
+        let plistPath = "MockEmptyEmailList"
+        let bundle = Bundle(for: type(of: self))
+        let urlHandler = MockUrlHandler()
+
+        let appSelector = AppSelector(with: plistPath,
+                                      in: bundle,
+                                      sourceView: UIView(),
+                                      urlHandler: urlHandler)
+
+        XCTAssertNil(appSelector)
+    }
+
+
 }
