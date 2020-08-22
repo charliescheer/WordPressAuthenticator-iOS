@@ -18,12 +18,14 @@ class LinkMailPresenter {
     ///   - appSelector: the app picker that contains the available clients. Nil if no clients are available
     ///                  reads the supported email clients from EmailClients.plist
     func presentEmailClients(on viewController: UIViewController,
-                             appSelector: AppSelector?) {
+                             appSelector: AppSelector?,
+                             mailComposerHandler: MailComposerHandler.Type = MFMailComposeViewController.self,
+                             urlHandler: URLHandler = UIApplication.shared) {
 
         guard let picker = appSelector else {
             // fall back to Apple Mail if no other clients are installed
-            if MFMailComposeViewController.canSendMail(), let url = URL(string: "message://") {
-                UIApplication.shared.open(url)
+            if mailComposerHandler.canSendMail(), let url = URL(string: "message://") {
+                urlHandler.open(url, options: [:], completionHandler: nil)
             } else {
                 showAlertToCheckEmail(on: viewController)
             }
@@ -47,3 +49,9 @@ class LinkMailPresenter {
         viewController.present(alertController, animated: true, completion: nil)
     }
 }
+
+protocol MailComposerHandler {
+    static func canSendMail() -> Bool
+}
+
+extension MFMailComposeViewController: MailComposerHandler { }
